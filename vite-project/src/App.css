@@ -1,56 +1,66 @@
-*{
+/* Global styling for all elements */
+* {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html{
+/* Set 100% height for HTML element */
+html {
   height: 100%;
 }
 
-.nav-bar{
-  display:flex;
+/* Styling for the navigation bar */
+.nav-bar {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: rgb(0, 0, 0, 0.5);
 }
 
-.hi{
+.nav-bar img {
+  max-width: 150px;
+}
+
+/* Styling for registration button */
+.reg-btn {
   padding: 15px;
-  border-radius: 15px;
-  background-color: red;
+  border-radius: 5px;
+  background-color: rgb(255, 187, 104);
   color: white;
   font-weight: bolder;
   font-size: 15px;
   cursor: pointer;
 }
 
-.hi:hover{
+.reg-btn:hover {
   background-color: rgb(255, 255, 255);
-  color: red;
+  color: rgb(255, 187, 104);
 }
 
-body{
+/* Styling for the body */
+body {
   margin: 0;
   padding: 0;
   background-color: rgb(255, 255, 255);
   text-align: center;
-  background: linear-gradient( rgb(255, 255, 255), rgb(255, 0, 0));
+  background: linear-gradient( rgb(255, 255, 255), rgb(255, 187, 104));
   background-repeat: no-repeat;
 }
 
+/* Styling for the main container */
 .App {
   text-align: center;
   background-color: rgb(255, 255, 255);
-  color: rgb(255, 0, 0);
+  color: rgb(255, 187, 104);
   max-width: 400px;
   margin: auto;
   margin-block: 65px;
   padding: 20px;
-  border: 1px double #676767;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
+/* Styling for input boxes */
 .input-box {
   text-align: center;
   width: 100%;
@@ -62,10 +72,13 @@ body{
   background-color: #b3b3b3;
 }
 
+/* Styling for validation alerts */
 .alert {
-  color: rgb(255, 0, 0)
+  color: rgb(255, 0, 0);
+  font-family: 'Times New Roman', Times, serif;
 }
 
+/* Styling for success message */
 .success-message {
   background-color: rgb(255, 0, 0);
   color: white;
@@ -75,12 +88,14 @@ body{
   text-align: center;
 }
 
+/* Styling for focused input boxes */
 .input-box:focus {
-  border-color:rgb(255, 0, 0);
+  border-color: rgb(255, 0, 0);
 }
 
-.btn{
-  background-color: rgb(255, 0, 0);
+/* Styling for general buttons */
+.btn {
+  background-color: rgb(255, 187, 104);
   color: rgb(255, 255, 255);
   padding: 15px;
   border: 2px solid rgb(177, 177, 177);
@@ -89,7 +104,98 @@ body{
   font-weight: bolder;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: white;
-  color: red;
+  color: rgb(255, 187, 104);
+}
+
+/* Styling for the main phrase */
+.phrase {
+  color: #000000;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+}
+
+/* Styling for the search container */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* Styling for search input and button */
+.search-container input {
+  padding: 10px;
+  width: 300px; /* Adjust the input width as needed */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-container button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(255, 187, 104); /* Change to your desired color */
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.search-container button:hover {
+  background-color: #fff;
+  color: rgb(255, 187, 104);
+}
+
+/* Styling for book list */
+.book-list {
+  display: flex;
+  overflow-x: auto;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+/* Styling for each book item */
+.book-item {
+  word-wrap: break-word;
+  text-align: center;
+  font-size: 15px;
+  display: inline-block;
+  background-color: white;
+  border-radius: 5px;
+  min-width: 200px;
+  margin: 10px;
+  padding: 10px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.book-item:hover {
+  transform: scale(1.05);
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 720px) {
+  /* ... (styling properties for smaller screens) */
+  .book-list{
+    margin-top: 100px;
+    margin-inline: 10px;
+  }
+
+  .book-item{
+    height: 300px;
+    padding-block: 100px;
+  }
+
+  .search-container{
+    margin-top: 50px;
+  }
+
+  .App{
+    margin: 15px;
+    height: 500px;
+    margin-block: 200px;
+  }
+  
 }
